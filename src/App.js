@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Map from './component/Map'
 
 function App() {
+  const location ={
+    address : "nabeul",
+    lat : 36.4513,
+    lng : 10.7357
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Map location={location} zoomLevel = {15} />
     </div>
   );
 }
